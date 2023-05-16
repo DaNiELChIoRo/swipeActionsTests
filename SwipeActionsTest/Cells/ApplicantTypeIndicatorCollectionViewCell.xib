@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ApplicantTypeIndicatorCollectionViewCell" id="GRs-38-lQ3" customClass="ApplicantTypeIndicatorCollectionViewCell" customModule="Recruit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="29"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZSm-6g-E92">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="29"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaR-A5-Nre">
+                        <rect key="frame" x="12.666666666666666" y="8.6666666666666661" width="24.666666666666671" height="11.999999999999998"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gaR-A5-Nre" firstAttribute="centerX" secondItem="ZSm-6g-E92" secondAttribute="centerX" id="7gw-mL-6HR"/>
+                    <constraint firstItem="gaR-A5-Nre" firstAttribute="centerY" secondItem="ZSm-6g-E92" secondAttribute="centerY" id="b4O-Xb-rOq"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="50" height="29"/>
+            <connections>
+                <outlet property="ballonTitleLabel" destination="gaR-A5-Nre" id="NfP-6K-OoB"/>
+            </connections>
+            <point key="canvasLocation" x="56.521739130434788" y="40.513392857142854"/>
+        </collectionViewCell>
+    </objects>
+</document>
