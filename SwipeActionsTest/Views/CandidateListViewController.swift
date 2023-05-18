@@ -1,29 +1,28 @@
 //
-//  ViewController.swift
+//  CandidateListViewController.swift
 //  SwipeActionsTest
 //
-//  Created by Daniel Meneses León on 16/05/23.
+//  Created by Daniel Meneses León on 18/05/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class CandidateListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
 
         tableView.registerCell(with: "CandidateTableViewCell")
+
     }
-
-
 }
 
-extension ViewController: UITableViewDelegate {
+extension CandidateListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action: UIContextualAction = .init(style: .destructive, title: "Delete") { action, _, callback in
             // TODO: -
@@ -39,7 +38,7 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension CandidateListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateTableViewCell.identifier,
                                                        for: indexPath) as? CandidateTableViewCell else { return .init() }
@@ -58,19 +57,12 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: CandidateTableViewCellDelegate {
+extension CandidateListViewController: CandidateTableViewCellDelegate {
     func candidateTableViewCell(sender: CandidateTableViewCell, didTapOnSpecialties specialties: [String]) {
         // TODO: -
     }
 
     func candidateTableViewCell(sender: CandidateTableViewCell, didNotTapOnSpecialties: Bool) {
         // TODO: -
-    }
-}
-
-extension UITableView {
-    func registerCell(with name: String) {
-        let nib = UINib(nibName: name, bundle: nil)
-        register(nib, forCellReuseIdentifier: name)
     }
 }
